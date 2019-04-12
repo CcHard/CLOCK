@@ -41,7 +41,7 @@
     let width = ctx.canvas.width, 
         height = ctx.canvas.height,
         r = width / 2,
-        rem = width / 250
+        rem = width / 280
 
     function drawBackground() {
       ctx.save()
@@ -70,6 +70,7 @@
         let x = Math.cos(rad) * (r - 15 * rem)
         let y = Math.sin(rad) * (r - 15 * rem)
         ctx.beginPath()
+        // 60 / 12 = 5  (每5个点是一个小时整点)
         if (i % 5 === 0) {
           ctx.fillStyle = '#000'
         } else {
